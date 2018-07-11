@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node-Express-MongoDB</title>
+</head>
+<body>
+    Treine-se para deixar tudo o que você teme perder.
+
+    <ul class="quotes">
+        <% for(var i=0; i<quotes.length; i++) {%>
+        <li class="quote">
+        <span><%= quotes[i].name %></span>
+        <span><%= quotes[i].quote %></span>
+        </li>
+        <% } %>
+    </ul>
+
+    <hr>
+
+    <form action="/quotes" method="POST">
+        <input type="text" placeholder="name" name="name">
+        <input type="text" placeholder="quote" name="quote">
+        <button type="submit">Submit</button>
+    </form> 
+    
+    <div>
+        <h2>Substitua a última citação escrita pelo Mestre Yoda com uma citação escrita por Darth Vader</h2>
+        <button id="update"> Darth Vader invade! </button>
+    </div>
+
+    <div>
+        <h2>Apagar a primeira citação de Darth Vader</h2>
+        <button id="delete"> Delete first Darth Vader quote </button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
